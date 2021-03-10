@@ -1,0 +1,27 @@
+.homeBody {
+  margin-top: 30px;
+}
+
+.homeBody__container{
+    margin: 0 !important;
+}
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+    .homeBody__widget {
+        display: none;
+      }
+}
+
+@media screen and (max-width: 768px) {
+    .homeBody__sideBar,
+    .homeBody__widget {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+}
+/* End of responsive */

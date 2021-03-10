@@ -1,0 +1,20 @@
+.commentScreen{
+    height:200px;
+   overflow-y: scroll;
+}
+
+.commentScreen__comment{
+    display: flex;
+    text-align: center;
+    margin-top:5px;
+}
+
+.commentScreen > h5{
+    margin-right: 5px;
+}
+
+.commentScreen__content{
+    background-color: rgb(235, 233, 233);
+    padding: 2px 10px;
+    border-radius: 10px;
+}

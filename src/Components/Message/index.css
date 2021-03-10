@@ -1,0 +1,66 @@
+.message {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.message__info__user {
+  display: flex;
+  align-items: center;
+}
+
+.message__info__user > img {
+  height: 35px;
+  width: 35px;
+  object-fit: contain;
+  margin-right: 10px;
+  border-radius: 999px;
+  margin-bottom: 5px;
+}
+
+.message__info {
+  padding-left: 10px;
+}
+
+.message__content{
+    margin: 0 0 0 45px;
+    background-color: rgb(236, 233, 233);
+    padding: 5px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.message__timestamp {
+  font-size: 8px;
+  color: gray;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+ 
+}
+
+@media screen and (max-width: 576px) {
+  .message__info__user > h4{
+    font-size: 15px;
+  }
+
+  .message__content > h6 {
+    font-size: 12px;
+  }
+}
+/* End of responsive */

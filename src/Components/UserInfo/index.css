@@ -1,0 +1,16 @@
+.userInfo{
+    display: flex;
+    align-items: center;
+}
+
+.userInfo > h4{
+    margin-left:8px;
+}
+
+.userInfo__logOut{
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: larger;
+    font-weight: 600;
+    color: gray;
+}

@@ -1,0 +1,7 @@
+.sideBar{
+    padding: 25px 10px;
+}
+
+.sideBar__link:hover{
+    text-decoration: none;
+}

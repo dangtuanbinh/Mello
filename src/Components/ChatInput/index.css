@@ -1,0 +1,37 @@
+.chatInput{
+    border-radius: 20px;
+}
+
+.chatInput > form {
+    display: flex;
+    justify-content: center;
+}
+
+.chatInput > form > input {
+    width: 100%;
+    border: 1px solid rgb(170, 169, 169);
+    border-radius: 50px;
+    padding: 20px;
+    outline: none;
+}
+
+.chatInput > form > button {
+    display: none !important;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+ 
+}
+
+@media screen and (max-width: 576px) {
+ 
+}
+/* End of responsive */

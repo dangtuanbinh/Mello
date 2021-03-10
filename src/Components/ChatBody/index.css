@@ -1,0 +1,28 @@
+.chatBody {
+  width: 100%;
+  margin-top: 30px;
+  height: 87vh;
+}
+.chatBody__row {
+  width: 100%;
+  margin: 0 !important;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+ .chatBody{
+   height: 100vh;
+ }
+}
+
+@media screen and (max-width: 768px) {
+ 
+}
+
+@media screen and (max-width: 576px) {
+ 
+}
+/* End of responsive */
