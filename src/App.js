@@ -1,6 +1,5 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./Components/Header/index";
 import Home from "./Pages/Home/index";
 import LogIn from "./Pages/LogIn";
 import User from "./Pages/User";
@@ -8,6 +7,7 @@ import Shop from "./Pages/Shop";
 import Video from "./Pages/Video";
 import Forum from "./Pages/Forum";
 import AccountSearch from "./Pages/AccountSearch/index"
+import UserDetail from "./Pages/UserDetail/index"
 import { useStateValue } from "./Context API/StateProvider";
 import { useEffect } from "react";
 import firebase from "firebase";
@@ -39,6 +39,7 @@ function App() {
         <>
           <BrowserRouter>
             <Switch>
+              <Route path="/userdetail/:userID" component={UserDetail}/>
               <Route path="/accountSearch" component={AccountSearch} />
               <Route path="/user" component={User} />
               <Route path="/shop" component={Shop} />
