@@ -10,7 +10,8 @@ import "./index.css";
 import { Modal } from "react-bootstrap";
 import ImageUploader from "../ImageUploader";
 import useModal from "../../HOCs/useModal";
-import ScreenShareIcon from '@material-ui/icons/ScreenShare';
+import ScreenShareIcon from "@material-ui/icons/ScreenShare";
+import PhotoIcon from '@material-ui/icons/Photo';
 
 const MessageSender = () => {
   // Get user from Firebase
@@ -48,10 +49,9 @@ const MessageSender = () => {
 
             <Box className="messageSender__uploader">
               <Box className="messageSender__uploader__button" onClick={toggle}>
-              <ScreenShareIcon style={{ color: "grey" }}/>
-                <h5>Share moments</h5>
+                <PhotoIcon />
               </Box>
-                
+
               <Modal
                 show={show}
                 onHide={toggle}
@@ -64,7 +64,7 @@ const MessageSender = () => {
                 </Modal.Header>
                 <Modal.Body>
                   {/* Pass toggle function to child component, to close it later */}
-                  <ImageUploader toggle={toggle}/>
+                  <ImageUploader toggle={toggle} />
                 </Modal.Body>
               </Modal>
             </Box>
@@ -77,17 +77,17 @@ const MessageSender = () => {
 
         <Box className="messageSender__bottom">
           <Box className="messageSender__option">
-            <VideocamIcon style={{ color: "red" }} />
+            <VideocamIcon />
             <h3>Live video</h3>
           </Box>
 
           <Box className="messageSender__option">
-            <PhotoLibraryIcon style={{ color: "green" }} />
+            <PhotoLibraryIcon />
             <h3>Photo/Video</h3>
           </Box>
 
           <Box className="messageSender__option">
-            <InsertEmoticonIcon style={{ color: "orange" }} />
+            <InsertEmoticonIcon />
             <h3>Feeling/Activity</h3>
           </Box>
         </Box>

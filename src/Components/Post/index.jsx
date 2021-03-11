@@ -77,19 +77,19 @@ const Post = ({
           <Box className="post__option">
             <ThumbUpIcon />
             <h6>0</h6>
-            <p>Like</p>
+            <h5>Like</h5>
           </Box>
 
           <Box className="post__option" onClick={showCommentScreen}>
             <ChatBubbleOutlineIcon />
             <h6>{comments.length}</h6>
-            <p>Comment</p>
+            <h5>Comment</h5>
           </Box>
 
           <Box className="post__option">
             <NearMeIcon />
             <h6>0</h6>
-            <p>Share</p>
+            <h5>Share</h5>
           </Box>
 
           <Box className="post__option">

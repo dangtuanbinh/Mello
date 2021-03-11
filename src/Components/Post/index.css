@@ -67,16 +67,16 @@
   flex: 1;
 }
 
-.post__option > h6 {
-  text-align: center;
-  margin-left: 2px;
-}
-
-.post__option > p {
-  margin: 0px 0px 0px 10px;
-  color: #d8c12b;
+.post__option > h5 {
+  margin: 0px 0px 0px 5px;
+  color: var(--dark-color);
   font-weight: 600;
   font-size: large;
+}
+
+.post__option > .MuiSvgIcon-root {
+  margin: 10px;
+  color: rgb(160, 158, 158);
 }
 
 .post__option:hover {
