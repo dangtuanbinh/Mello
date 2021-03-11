@@ -10,6 +10,20 @@
   display: flex;
   align-items: center;
 }
+
+.header__brand{
+  display: flex;
+  align-items: center;
+}
+
+.header__brand > h3{
+  color: rgb(51, 51, 51);
+}
+
+.header__brandImage {
+  width: 60px;
+}
+
 .navbar-light .navbar-brand {
   font-size: 30px;
   font-weight: 600;
@@ -20,19 +34,21 @@
   position: relative;
   display: flex;
   align-items: center;
+  margin-left: 240px;
 }
 
 .header__searchIcon {
   position: absolute;
-  margin-left: 170px;
+  margin-right: 0;
   color: gray;
+  margin-left: 660px;
 }
 
 .header__search input {
-  border-radius: 100px;
+  border-radius: 15px;
   overflow: hidden;
-  width: 200px;
-  padding: 4px 20px;
+  width: 700px;
+  padding: 13px 20px;
   background: #f5f3eb;
   border: none;
 }
@@ -47,26 +63,20 @@
 
 .header__center {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  display: none;
 }
 
 .header__option:hover > .MuiSvgIcon-root {
-  color: #edd63e;
+  color: var(--primary-color);
 }
 
 .header__option__active > .MuiSvgIcon-root {
-  color: #edd63e;
-}
-
-.header__option__active {
-  border-bottom: 4px solid #edd63e;
+  color: var(--primary-color);
 }
 
 .header__option__link .MuiSvgIcon-root {
   font-size: 2rem;
-  color: #edd63e;
+  color: var(--primary-color);
 }
 
 .header__right {
@@ -88,7 +98,7 @@
 @media screen and (max-width: 1200px) {
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   .header .navbar-nav {
     flex-direction: row;
     justify-content: space-between;
@@ -107,17 +117,39 @@
   .header__info h4 {
     font-size: 15px;
   }
+
+  .header__search input {
+    width: 200px;
+  }
+
+  .header__searchIcon {
+    margin-left: 170px;
+  }
+
+  .header__search {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .header .navbar-light .navbar-brand {
     font-size: 20px;
   }
+
+  .header__center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .header .navbar-light .navbar-brand {
     font-size: 16px;
+  }
+
+  .header__brand > h3 {
+    display: none;
   }
 }
 /* End of responsive */

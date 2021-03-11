@@ -7,7 +7,7 @@ import { Col, Row } from "react-bootstrap";
 import { Box } from "@material-ui/core";
 
 const HomeBody = () => {
-  return (
+return (
     <>
       <Box className="homeBody">
         <Box >

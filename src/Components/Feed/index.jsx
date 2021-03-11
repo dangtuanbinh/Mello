@@ -22,7 +22,6 @@ const Feed = () => {
     <>
       <Container> 
         <Box className="feed">
-          <StoryReel />
           <MessageSender />
           {posts?.map(({id, data}) => (
             <Post

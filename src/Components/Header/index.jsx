@@ -11,6 +11,7 @@ import AddIcon from "@material-ui/icons/Add";
 import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import brandImage from "../../Assets/images/brand-removebg-preview.png";
 import { useStateValue } from "../../Context API/StateProvider";
 import { NavLink } from "react-router-dom";
 
@@ -26,15 +27,18 @@ const Header = () => {
       <Box className="header">
         <Navbar collapseOnSelect expand="lg">
           <Box className="header__left">
-            <Navbar.Brand href="#home">MELLOW</Navbar.Brand>
+            <Navbar.Brand href="#home" className="header__brand">
+              <img src={brandImage} alt="Brand Image"  className="header__brandImage"/>
+              <h3>Mellow</h3>
+            </Navbar.Brand>
             <Box className="header__search">
-              <NavLink to="/accountSearch"  className="header__searchIcon">
+              <NavLink to="/accountSearch" className="header__searchIcon">
                 <SearchIcon />
               </NavLink>
 
               <input
                 type="text"
-                placeholder="Search Meowcount"
+                placeholder="Search..."
                 value={accountSearch}
                 onChange={(e) => setAccountSearch(e.target.value)}
               />

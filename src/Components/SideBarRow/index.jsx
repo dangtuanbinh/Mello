@@ -8,7 +8,7 @@ const SideBarRow = ({Icon, title}) => {
   return (
     <>
       <Box className="sideBarRow">
-          {Icon && <Icon />}
+          {Icon && <Icon className="sideBarRow__icon"/>}
           <h5>{title}</h5>
       </Box>
     </>

@@ -19,10 +19,10 @@ const SideBar = () => {
         <Box className="sideBar__userInfo">
           <UserInfo />
         </Box>
-        <NavLink className="sideBar__link"  to="">
+        <NavLink className="sideBar__link"  to="/">
           <SideBarRow
             Icon={LocalHospitalIcon}
-            title="Covid-19 Information Center"
+            title="Feeds"
           />
         </NavLink>
 
