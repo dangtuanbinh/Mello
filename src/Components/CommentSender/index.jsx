@@ -6,7 +6,7 @@ import db from "../../Firebase";
 
 import "./index.css";
 
-const CommentSender = ({ postID, user }) => {
+const CommentSender = ({ postID, user, profilePic }) => {
   const [comment, setComment] = useState([]);
 
   const postComment = (e) => {
@@ -21,11 +21,12 @@ const CommentSender = ({ postID, user }) => {
   return (
     <>
       <Box className="commentSender">
+        <img src={profilePic} alt="User profile" />
         <form className="commentSender__form" type="submit">
           <input
             value={comment}
             type="text"
-            placeholder="Your comment"
+            placeholder="Your comment..."
             onChange={(e) => setComment(e.target.value)}
           />
           <button
@@ -36,10 +37,10 @@ const CommentSender = ({ postID, user }) => {
             submit
           </button>
           <SendIcon
-              className="commentSender__icon"
-              onClick={postComment}
-              type="submit"
-            />
+            className="commentSender__icon"
+            onClick={postComment}
+            type="submit"
+          />
         </form>
       </Box>
     </>

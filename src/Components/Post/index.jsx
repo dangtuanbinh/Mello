@@ -6,6 +6,7 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Comment from "../Comment/index";
 import React, { useEffect, useState } from "react";
+import CommentSender from "../CommentSender/index"
 
 import "./index.css";
 import db from "../../Firebase";
@@ -49,13 +50,13 @@ const Post = ({
     <>
       <Box className="post">
         <Box className="post__top">
-          <Avatar src={profilePic} className="post__avatar" />
+          <img src={profilePic} className="post__avatar" />
 
           <Box className="post__info">
-            <h3>{username ? username : <p>New user</p>}</h3>
-            <span className="post__timestamp">
+            <h3>{username ? username : <h3>New user</h3>}</h3>
+            <h5 className="post__timestamp">
               {new Date(timestamp?.toDate()).toUTCString()}
-            </span>
+            </h5>
           </Box>
         </Box>
 
@@ -66,7 +67,7 @@ const Post = ({
         {image ? (
           <>
             <Box className="post__image">
-              <img src={image} alt="" />
+              <img src={image} alt={image.name} />
             </Box>
           </>
         ) : (
@@ -100,6 +101,10 @@ const Post = ({
 
         <Box className="post__comment">
           {commentScreen && <Comment postID={postID} user={user} />}
+        </Box>
+
+        <Box className="post__input">
+          <CommentSender profilePic={profilePic} postID={postID} user={user}/>
         </Box>
       </Box>
     </>

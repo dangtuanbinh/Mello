@@ -1,12 +1,13 @@
-.sideBar{
-    background-color: var(--white-color);
-    height: 100%;
+.sideBar {
+  background-color: var(--white-color);
+  height: 100%;
 }
 
-.sideBar__userInfo{
-    padding: 20px 10px;
+.sideBar__userInfo {
+  padding: 20px 10px;
 }
 
-.sideBar__link:hover{
-    text-decoration: none;
+.sideBar__link:hover {
+  text-decoration: none;
 }
+

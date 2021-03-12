@@ -19,7 +19,7 @@ const SideBar = () => {
         <Box className="sideBar__userInfo">
           <UserInfo />
         </Box>
-        <NavLink className="sideBar__link"  to="/">
+        <NavLink exact activeClassName="active" className="sideBar__link"  to="/">
           <SideBarRow
             Icon={LocalHospitalIcon}
             title="Feeds"
