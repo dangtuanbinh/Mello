@@ -1,70 +1,101 @@
-.login{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.login {
+  height: 100vh;
+  background-image: url("https://res.cloudinary.com/dufh7rv0n/image/upload/v1615723760/kate-stone-matheson-uy5t-CJuIK4-unsplash_zp81t9.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.login__left > h1 {
-    font-size: 50px;
-    color: #edd63e;
-    text-align: center;
+.login__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
-.login__left > p{
-    text-align: center;
+.login__brand > img {
+  width: 80px;
 }
 
-.login__left__gif{
-    width: 100%;
-    height: 0;
-    padding-bottom: 100%;
-    position: relative;
+.login__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 85vh;
 }
 
-.login__left__iframe{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.login__right{
-    display: flex;
-}
-
-.login__right__top > form > h3{
-    font-size: 20px;
-    font-weight: 600;
-}
-
-
-
-
-
-
-
-
-
-
-
-.login__button{
-    margin: 10px 0;
-}
-
-.login__right__bottom{
+.login__content__container{
+    box-shadow: 1px 0px 27px -9px rgba(0,0,0,1);
+    padding: 30px;
+    border-radius: 30px;
+    background-color: rgb(0, 0, 0,0.45); 
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    max-width: 350px;
 }
 
-.login__signUp{
-    display: flex;
-    flex-direction: column;
+.login__content__container > p{
+    color: var(--white-color);
 }
 
-.login__signUp > input {
-    margin: 5px;
+.login__form > h3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+
+.login__form > input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px 0;
+    background-color: transparent;
+    border-bottom: 1px solid var(--white-color);
+    color: var(--white-color);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+::placeholder {
+    color: rgb(235, 235, 235);
+}
+
+.login__form > span{
+    font-size: 20px;
+    color: var(--white-color);
+}
+
+.login__button {
+  margin: 15px 0;
+  padding: 5px 0;
+  width: 100%;
+  background-color: rgba(248,80,50,1);;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: -1px -1px 29px -5px rgba(0,0,0,0.75);
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.login__content__container > button {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 5px 0;
+    border-radius: 10px;
+    background-color: var(--white-color);
+}
+
+.login__content > p {
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 600;
 }
 
 /* Responsive */
@@ -72,16 +103,12 @@
 }
 
 @media screen and (max-width: 992px) {
-  
 }
 
 @media screen and (max-width: 768px) {
- .login, .login__right{
-     flex-direction: column;
- }
+  
 }
 
 @media screen and (max-width: 576px) {
-    
 }
 /* End of responsive */

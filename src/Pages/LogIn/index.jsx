@@ -4,9 +4,10 @@ import { auth, provider } from "../../Firebase";
 import { actionTypes } from "../../Context API/reducer";
 import { useStateValue } from "../../Context API/StateProvider";
 import { useHistory } from "react-router-dom";
-
+import brandImage from "../../Assets/images/brand-removebg-preview.png";
 import "./index.css";
 import { Modal } from "react-bootstrap";
+import { NavLink, withRouter } from "react-router-dom";
 
 const LogIn = () => {
   const [state, dispatch] = useStateValue();
@@ -64,107 +65,103 @@ const LogIn = () => {
   return (
     <>
       <Box className="login">
-        <Box className="login__left">
-          
-          <div className="login__left__gif">
-            <iframe
-              className="login__left__iframe"
-              src="https://giphy.com/embed/eNSUpqinyhIacptS86"
-              frameBorder="0"
-              allowFullScreen
-            ></iframe>
-          </div>
-          <h1>Mellow</h1>
-          <p>Connecting your cat</p>
+        <Box className="login__header">
+          <Box className="login__brand">
+            <img src={brandImage} alt="Brand image" />
+          </Box>
+
+          <Box className="login__navigation">
+            <NavLink to="/">Sign in</NavLink>
+
+            <NavLink to="/">Sign up</NavLink>
+          </Box>
         </Box>
 
-        <Box className="login__right">
-          <Box className="login__right__top">
-            <form type="submit">
-              <h3>Log in with your account</h3>
-              <p>Email</p>
+        <Box className="login__content">
+          <Box className="login__content__container">
+            <form type="submit" className="login__form">
+              <h3>Welcome! <br/> Login with your account</h3>
+              <span>Email</span>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="abcxyz@gmail.com"
+                placeholder="Youremail@abc.com"
               />
-              <p>Password</p>
+              <span>Password</span>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Password"
+                placeholder="Your Password"
               />
-              <Box className="login__button">
-                <Button
+
+              <Box>
+                <button
                   type="submit"
                   onClick={signInWithUsername}
                   variant="contained"
-                  color="primary"
+                  className="login__button"
                 >
                   Login
-                </Button>
+                </button>
               </Box>
             </form>
-            <p>
-              Don't have an account yet?{" "}
-              <a href="#" onClick={handleShow}>
-                Sign up here
-              </a>
-            </p>
 
             {/* Sign up modal */}
-            <Modal show={show} onHide={handleClose}>
-              <Modal.Header closeButton>
-                <Modal.Title>Sign up!</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                <form type="submit" className="login__signUp">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Your email"
-                  />
-                  <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Your password"
-                  />
-                </form>
-              </Modal.Body>
-              <Modal.Footer>
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  onClick={handleClose}
-                >
-                  Close
-                </Button>
-                <Button variant="contained" color="primary" onClick={signUp}>
-                  Sign up
-                </Button>
-              </Modal.Footer>
-            </Modal>
-          </Box>
+            {/* <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Sign up!</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <form type="submit" className="login__signUp">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Your email"
+                    />
+                    <input
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="Your password"
+                    />
+                  </form>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    onClick={handleClose}
+                  >
+                    Close
+                  </Button>
+                  <Button variant="contained" color="primary" onClick={signUp}>
+                    Sign up
+                  </Button>
+                </Modal.Footer>
+              </Modal> */}
 
-          <Box className="login__right__bottom">
             <p>Or</p>
-            <Button
+            <button
               type="submit"
-              variant="contained"
-              color="primary"
               onClick={signInWithGoogle}
             >
-              Login with google
-            </Button>
+              Login with Google
+            </button>
           </Box>
+
+          <p>
+            Need account?{" "}
+            <a href="#" onClick={handleShow}>
+              Sign up here
+            </a>
+          </p>
         </Box>
       </Box>
     </>
   );
 };
 
-export default LogIn;
+export default withRouter(LogIn);
