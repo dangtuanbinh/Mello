@@ -14,7 +14,34 @@
 }
 
 .login__brand > img {
-  width: 80px;
+  width: 85px;
+}
+
+.login__navLink:hover{
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: rgba(248,80,50,1);
+    transition: ease-in-out 0.5s;
+    font-weight: 400;
+}
+
+.active{
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: rgba(248,80,50,1);
+    font-weight: 400;
+}
+
+.login__navLink{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: transparent;
+    color: rgba(248,80,50,1);
+    padding: 7px 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(248,80,50,1);
 }
 
 .login__content {
@@ -60,7 +87,7 @@
     margin-bottom: 20px;
 }
 
-::placeholder {
+.login__form::placeholder {
     color: rgb(235, 235, 235);
 }
 

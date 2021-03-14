@@ -3,6 +3,10 @@
    overflow-y: scroll;
 }
 
+.commentScreen::-webkit-scrollbar{
+    display: none;
+}
+
 .commentScreen__comment{
     display: flex;
     text-align: center;

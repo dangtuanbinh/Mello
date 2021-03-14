@@ -71,29 +71,29 @@ const LogIn = () => {
           </Box>
 
           <Box className="login__navigation">
-            <NavLink to="/">Sign in</NavLink>
-
-            <NavLink to="/">Sign up</NavLink>
+            <button activeClassName="active" className="login__navLink" to="/signup" onClick={handleShow}>
+              Sign up
+            </button>
           </Box>
         </Box>
 
         <Box className="login__content">
           <Box className="login__content__container">
             <form type="submit" className="login__form">
-              <h3>Welcome! <br/> Login with your account</h3>
+              <h3>
+                Welcome! <br /> Login with your account
+              </h3>
               <span>Email</span>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Youremail@abc.com"
               />
               <span>Password</span>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Your Password"
               />
 
               <Box>
@@ -109,7 +109,7 @@ const LogIn = () => {
             </form>
 
             {/* Sign up modal */}
-            {/* <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                   <Modal.Title>Sign up!</Modal.Title>
                 </Modal.Header>
@@ -141,13 +141,10 @@ const LogIn = () => {
                     Sign up
                   </Button>
                 </Modal.Footer>
-              </Modal> */}
+              </Modal>
 
             <p>Or</p>
-            <button
-              type="submit"
-              onClick={signInWithGoogle}
-            >
+            <button type="submit" onClick={signInWithGoogle}>
               Login with Google
             </button>
           </Box>
