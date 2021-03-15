@@ -39,7 +39,7 @@ function App() {
         ) : (
           <>
             <Switch>
-              <Route path="/userdetail/:userID" component={UserDetail} />
+              <Route path="/userdetail" component={UserDetail} />
               <Route path="/accountSearch" component={AccountSearch} />
               <Route path="/user" component={User} />
               <Route path="/shop" component={Shop} />

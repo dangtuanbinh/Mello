@@ -26,11 +26,19 @@ const CommentScreen = ({ postID, user }) => {
       <Box className="commentScreen">
         {comments.map((comment) => (
           <>
-            <Box className="commentScreen__comment">
-              <h5>{comment.comUser} :</h5>
-              <span className="commentScreen__content">
-                {comment.comMessage}
-              </span>
+            <Box className="commentScreen__container">
+              <Box className="commentScreen__body">
+                <img src={user.photoURL} alt="User photo" />
+                <Box className="commentScreen__body__content">
+                  <h5>{comment.comUser}</h5>
+                  <span>{comment.comMessage}</span>
+                </Box>
+              </Box>
+              <Box className="commentScreen__footer">
+                <p>4 hours</p>
+                <p>Like</p>
+                <p>Reply</p>
+              </Box>
             </Box>
           </>
         ))}

@@ -25,12 +25,7 @@
     font-weight: 400;
 }
 
-.active{
-    text-decoration: none;
-    color: var(--white-color);
-    background-color: rgba(248,80,50,1);
-    font-weight: 400;
-}
+
 
 .login__navLink{
     margin-right: 50px;

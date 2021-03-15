@@ -27,9 +27,15 @@ const Header = () => {
       <Box className="header">
         <Navbar collapseOnSelect expand="lg">
           <Box className="header__left">
-            <Navbar.Brand href="#home" className="header__brand">
-              <img src={brandImage} alt="Brand Image"  className="header__brandImage"/>
-              <h3>Mellow</h3>
+            <Navbar.Brand>
+              <NavLink to="/" className="header__brand">
+                <img
+                  src={brandImage}
+                  alt="Brand Image"
+                  className="header__brandImage"
+                />
+                <h3>Mellow</h3>
+              </NavLink>
             </Navbar.Brand>
             <Box className="header__search">
               <NavLink to="/accountSearch" className="header__searchIcon">
@@ -49,7 +55,7 @@ const Header = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav>
               <div className="header__center">
-                <div className="header__option header__option__active">
+                <div className="header__option">
                   <NavLink className="header__option__link" to="/">
                     <HomeIcon />
                   </NavLink>
@@ -81,10 +87,11 @@ const Header = () => {
             </Nav>
 
             <Box className="header__right">
-              <Box className="header__info">
+              <NavLink to="/userdetail" className="header__info">
                 <Avatar src={user.photoURL} />
                 <h4>{user.displayName ? user.displayName : user.email}</h4>
-              </Box>
+              </NavLink>
+
               <IconButton>
                 <AddIcon />
               </IconButton>

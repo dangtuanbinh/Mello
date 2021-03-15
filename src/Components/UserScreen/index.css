@@ -1,0 +1,11 @@
+.userScreen{
+    height: 89vh;
+    background-color: var(--white-color);
+    flex: 0.8;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.userScreen::-webkit-scrollbar{
+    display: none;
+}

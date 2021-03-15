@@ -10,7 +10,6 @@ import "./index.css";
 import { Modal } from "react-bootstrap";
 import ImageUploader from "../ImageUploader";
 import useModal from "../../HOCs/useModal";
-import ScreenShareIcon from "@material-ui/icons/ScreenShare";
 import PhotoIcon from '@material-ui/icons/Photo';
 
 const MessageSender = () => {

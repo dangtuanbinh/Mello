@@ -14,6 +14,11 @@
 .header__brand{
   display: flex;
   align-items: center;
+  background-color: none;
+}
+
+.header__brand:hover{
+  text-decoration: none;
 }
 
 .header__brand > h3{
@@ -70,10 +75,6 @@
   color: var(--primary-color);
 }
 
-.header__option__active > .MuiSvgIcon-root {
-  color: var(--primary-color);
-}
-
 .header__option__link .MuiSvgIcon-root {
   font-size: 2rem;
   color: var(--primary-color);
@@ -90,8 +91,14 @@
   align-items: center;
 }
 
+.header__info:hover{
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
 .header__info h4 {
   margin-left: 10px;
+  color: var(--dark-color);
 }
 
 /* Responsive */

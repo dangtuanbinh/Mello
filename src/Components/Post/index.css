@@ -52,6 +52,22 @@
   border-radius: 15px;
 }
 
+.post__statistic{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.post__statistic__right{
+  display: flex;
+}
+
+.post__statistic__right > p{
+  margin-right: 30px;
+  cursor: pointer;
+}
+
 .post__comment {
   border-top: 1px solid lightgray;
 }

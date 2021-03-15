@@ -6,7 +6,7 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Comment from "../Comment/index";
 import React, { useEffect, useState } from "react";
-import CommentSender from "../CommentSender/index"
+import CommentSender from "../CommentSender/index";
 
 import "./index.css";
 import db from "../../Firebase";
@@ -74,22 +74,27 @@ const Post = ({
           <></>
         )}
 
+        <Box className="post__statistic">
+          <p>0 likes</p>
+          <Box className="post__statistic__right">
+           <p onClick={showCommentScreen}>{comments.length} comments</p>
+           <p>0 shares</p>
+          </Box>
+        </Box>
+
         <Box className="post__optionGroup">
           <Box className="post__option">
             <ThumbUpIcon />
-            <h6>0</h6>
             <h5>Like</h5>
           </Box>
 
           <Box className="post__option" onClick={showCommentScreen}>
             <ChatBubbleOutlineIcon />
-            <h6>{comments.length}</h6>
             <h5>Comment</h5>
           </Box>
 
           <Box className="post__option">
             <NearMeIcon />
-            <h6>0</h6>
             <h5>Share</h5>
           </Box>
 
@@ -104,7 +109,7 @@ const Post = ({
         </Box>
 
         <Box className="post__input">
-          <CommentSender profilePic={profilePic} postID={postID} user={user}/>
+          <CommentSender profilePic={profilePic} postID={postID} user={user} />
         </Box>
       </Box>
     </>

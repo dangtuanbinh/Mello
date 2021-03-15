@@ -1,0 +1,41 @@
+.userSideBar {
+  height: 89vh;
+  background-color: #f5f3eb;
+  flex: 0.2;
+}
+
+.userSideBar__info {
+  padding: 40px 10px;
+}
+
+.userSideBar__info__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.userSideBar__info__top > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.userSideBar__info__name {
+  margin: 20px 0;
+}
+
+
+
+.userSideBar__info__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.userSideBar__info__statistic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
