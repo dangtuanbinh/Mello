@@ -35,13 +35,31 @@
 
 .userFeed__body{
     width: 100%;
-    background-color: blue;
-    height: 80vh;
-    overflow-y: scroll;
-    padding-top: 25px;
-    height: 88vh;
+    padding-top: 5px;
+   
 }
 
-.userFeed__body::-webkit-scrollbar{
+.userFeed__body__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userFeed__navigator__link{
+    color: var(--grey-color);
+    margin-left: 20px;
+}
+
+.nav-link.active, .show>.nav-link {
+    color: var(--primary-color);
+}
+
+.userFeed__body__bottom{
+    background-color: rgb(144, 144, 251);
+    height: 82vh;
+    overflow-y: scroll;
+}
+
+.userFeed__body__bottom::-webkit-scrollbar{
     display: none;
 }

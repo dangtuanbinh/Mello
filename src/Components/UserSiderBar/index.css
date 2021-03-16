@@ -119,6 +119,18 @@
   color: var(--dark-color);
 }
 
+.userSideBar__navigator .nav-link.active .MuiSvgIcon-root,.userSideBar__navigator .show>.nav-link .MuiSvgIcon-root{
+  color: var(--primary-color);
+}
+
+.userSideBar__navigator .nav-link.active h5,.userSideBar__navigator .show>.nav-link .h5{
+  color: var(--primary-color);
+}
+
+.userSideBar__navigator .nav-link.active ,.userSideBar__navigator .show>.nav-link {
+  border-right: 2.5px solid var(--primary-color);
+}
+
 .userSideBar__navigator__link:hover .MuiSvgIcon-root, .userSideBar__navigator__link:hover h5{
 color: var(--primary-color);
 font-weight: bolder;
