@@ -1,11 +1,41 @@
 .userSideBar {
-  height: 89vh;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+}
+
+.userSideBar__left {
   background-color: #f5f3eb;
   flex: 0.2;
 }
 
+.userSideBar__right {
+  flex: 0.8;
+  width: 100%;
+}
+
 .userSideBar__info {
-  padding: 40px 10px;
+  padding: 10px;
+}
+
+.userSideBar__brand {
+  display: flex;
+  align-items: center;
+  background-color: none;
+}
+
+.userSideBar__brand:hover {
+  text-decoration: none;
+}
+
+.userSideBar__brand > h3 {
+  color: rgb(51, 51, 51);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.userSideBar__brandImage {
+  width: 60px;
 }
 
 .userSideBar__info__top {
@@ -13,29 +43,95 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 40px;
 }
 
 .userSideBar__info__top > img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  padding: 5px;
 }
 
 .userSideBar__info__name {
   margin: 20px 0;
 }
 
+.userSideBar__info__name > span,
+.userSideBar__info__statistic > span {
+  font-size: 15px;
+  color: #adadad;
+}
 
+.userSideBar__info__name > h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
 
 .userSideBar__info__bottom {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: 0.5px solid rgb(219, 219, 219);
+  width: 100%;
 }
 
-.userSideBar__info__statistic {
+.userSideBar__info__statistic,
+.userSideBar__info__name {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.userSideBar__info__statistic > h3 {
+  font-size: 20px;
+  font-size: 600;
+}
+
+.userSideBar__navigator__body,
+.userSideBar__navigator__footer {
+  padding-left: 30px;
+}
+
+.userSideBar__navigator__footer {
+  cursor: pointer;
+  margin-top: 20px;
+  border-top: 0.5px solid rgb(219, 219, 219);
+  padding-top: 30px;
+}
+
+.userSideBar__navigator__link{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.userSideBar__navigator__link .MuiSvgIcon-root{
+  font-size: 1.75rem;
+  color: rgb(155, 155, 155);
+  margin-right: 30px;
+}
+
+.userSideBar__navigator__link > h5{
+  color: var(--dark-color);
+}
+
+.userSideBar__navigator__link:hover .MuiSvgIcon-root, .userSideBar__navigator__link:hover h5{
+color: var(--primary-color);
+font-weight: bolder;
+}
+
+.userSideBar__navigator__link:hover{
+  border-right: 2.5px solid var(--primary-color);
+}
+
+.nav-link{
+  padding: 0 !important;
+}
+
+
+
+
