@@ -48,10 +48,19 @@
 .userFeed__navigator__link{
     color: var(--grey-color);
     margin-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    
 }
 
-.nav-link.active, .show>.nav-link {
+.userFeed__navigator__link:hover{
+    text-decoration: none;
+    color: var(--grey-color);
+}
+
+.userFeed__body__navigator .nav-link.active,.userFeed__body__navigator .show>.nav-link {
     color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .userFeed__body__bottom{
@@ -62,4 +71,8 @@
 
 .userFeed__body__bottom::-webkit-scrollbar{
     display: none;
+}
+
+.userFeed__body__bottom{
+    
 }
