@@ -48,7 +48,7 @@ const Post = ({
 
   return (
     <>
-      <Box className="post">
+      <Box className="post" style={image ? {"height": "850px"} : {"height": "350px"}}>
         <Box className="post__top">
           <img src={profilePic} className="post__avatar" />
 
@@ -66,8 +66,8 @@ const Post = ({
 
         {image ? (
           <>
-            <Box className="post__image">
-              <img src={image} alt={image.name} />
+            <Box className="post__image" style={{backgroundImage: `url(${image})`}}>
+              {/* <img src={image} alt={image.name} /> */}
             </Box>
           </>
         ) : (
