@@ -64,7 +64,6 @@
 }
 
 .userFeed__body__bottom{
-    background-color: rgb(144, 144, 251);
     height: 82vh;
     overflow-y: scroll;
 }
