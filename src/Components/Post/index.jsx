@@ -7,9 +7,9 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Comment from "../Comment/index";
 import React, { useEffect, useState } from "react";
 import CommentSender from "../CommentSender/index";
-
 import "./index.css";
 import db from "../../Firebase";
+import firebase from "firebase";
 
 const Post = ({
   postID,
@@ -29,26 +29,58 @@ const Post = ({
     setCommentScreen(!commentScreen);
   };
 
+  // Create like button to change color and like counts
+  const [likeButton, setLikeButton] = useState(true);
+  const [likes, setLikes] = useState([]);
+
   useEffect(() => {
-    let unsubcribe;
     if (postID) {
-      unsubcribe = db
-        .collection("posts")
+      db.collection("posts")
         .doc(postID)
         .collection("comment")
         .orderBy("timestamp", "asc")
         .onSnapshot((snapshot) => {
           setComments(snapshot.docs.map((doc) => doc.data()));
         });
+
+      db.collection("posts")
+        .doc(postID)
+        .collection("likeCount")
+        .orderBy("timestamp", "asc")
+        .onSnapshot((snapshot) => {
+          setLikes(
+            snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+          );
+        });
+
+      {
+        likes.map(({ data }) => {
+          data.likedUser === user.displayName
+            ? setLikeButton(!likeButton)
+            : setLikeButton(likeButton);
+        });
+      }
     }
-    return () => {
-      unsubcribe();
-    };
   }, [postID]);
 
+  // Post like count to Firebase
+  const uploadLike = (e) => {
+    e.preventDefault();
+    db.collection("posts").doc(postID).collection("likeCount").add({
+      likedUser: user.displayName,
+      profilePic: user.photoURL,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+
+    setLikeButton(!likeButton);
+  };
+  
   return (
     <>
-      <Box className="post" style={image ? {"height": "850px"} : {"height": "350px"}}>
+      <Box
+        className="post"
+        style={image ? { height: "900px" } : { height: "350px" }}
+      >
         <Box className="post__top">
           <img src={profilePic} className="post__avatar" />
 
@@ -66,24 +98,28 @@ const Post = ({
 
         {image ? (
           <>
-            <Box className="post__image" style={{backgroundImage: `url(${image})`}}>
-              {/* <img src={image} alt={image.name} /> */}
-            </Box>
+            <Box
+              className="post__image"
+              style={{ backgroundImage: `url(${image})` }}
+            ></Box>
           </>
         ) : (
           <></>
         )}
 
         <Box className="post__statistic">
-          <p>0 likes</p>
+          <p>{likes.length} likes</p>
           <Box className="post__statistic__right">
-           <p onClick={showCommentScreen}>{comments.length} comments</p>
-           <p>0 shares</p>
+            <p onClick={showCommentScreen}>{comments.length} comments</p>
+            <p>0 shares</p>
           </Box>
         </Box>
 
         <Box className="post__optionGroup">
-          <Box className="post__option">
+          <Box
+            className={likeButton ? "post__option" : "post__option--like"}
+            onClick={uploadLike}
+          >
             <ThumbUpIcon />
             <h5>Like</h5>
           </Box>

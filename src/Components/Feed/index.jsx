@@ -9,7 +9,7 @@ import "./index.css";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
-  const [{user}, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
   useEffect(() => {
     // New post added => this code run
     db.collection("posts")
@@ -20,13 +20,13 @@ const Feed = () => {
   }, []);
   return (
     <>
-      <Container> 
+      <Container>
         <Box className="feed">
           <MessageSender />
-          {posts?.map(({id, data}) => (
+          {posts?.map(({ id, data }) => (
             <Post
               key={data.id}
-              postID = {id}
+              postID={id}
               user={user}
               profilePic={data.profilePic}
               message={data.message}
@@ -36,7 +36,6 @@ const Feed = () => {
               comment={data.comment}
             />
           ))}
-
         </Box>
       </Container>
     </>

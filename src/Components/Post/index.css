@@ -89,6 +89,26 @@
   flex: 1;
 }
 
+.post__option--like{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  flex: 1;
+}
+
+.post__option--like > h5{
+  margin: 0px 0px 0px 5px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: large;
+}
+
+.post__option--like > .MuiSvgIcon-root{
+  margin: 10px;
+  color: var(--primary-color);
+}
+
 .post__option > h5 {
   margin: 0px 0px 0px 5px;
   color: var(--dark-color);
