@@ -4,6 +4,7 @@ import UserListItem from "../UserListItem/index";
 import firebase from "firebase";
 import db from "../../Firebase";
 import "./index.css";
+import UpdatingScreen from "../UpdatingScreen";
 
 const UserListScreen = () => {
   const [users, setUsers] = useState([]);
@@ -19,7 +20,7 @@ const UserListScreen = () => {
   return (
     <>
       <Box>
-        Thi is user list screen
+       
         {users?.map((id, user) => (
           <UserListItem
             key={user.id}
@@ -29,6 +30,8 @@ const UserListScreen = () => {
             city={user.city}
           />
         ))}
+
+        <UpdatingScreen />
       </Box>
     </>
   );

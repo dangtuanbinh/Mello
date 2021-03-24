@@ -52,14 +52,6 @@ const Post = ({
             snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
           );
         });
-
-      {
-        likes.map(({ data }) => {
-          data.likedUser === user.displayName
-            ? setLikeButton(!likeButton)
-            : setLikeButton(likeButton);
-        });
-      }
     }
   }, [postID]);
 
@@ -74,7 +66,7 @@ const Post = ({
 
     setLikeButton(!likeButton);
   };
-  
+
   return (
     <>
       <Box

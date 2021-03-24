@@ -1,0 +1,12 @@
+.updatingScreen{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.updatingScreen > img{
+    width: 150px;
+}
