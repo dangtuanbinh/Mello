@@ -1,6 +1,5 @@
 import { Box, Container } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
-import StoryReel from "../StoryReel/index";
 import MessageSender from "../MessageSender/index";
 import Post from "../Post/index";
 import db from "../../Firebase";

@@ -61,6 +61,7 @@ const LogIn = () => {
       .catch((error) => {
         alert(error.message);
       });
+      handleClose();
   };
   return (
     <>
@@ -111,7 +112,7 @@ const LogIn = () => {
             {/* Sign up modal */}
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                  <Modal.Title>Sign up!</Modal.Title>
+                  <Modal.Title>Welcome to Mellow</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                   <form type="submit" className="login__signUp">
@@ -130,16 +131,13 @@ const LogIn = () => {
                   </form>
                 </Modal.Body>
                 <Modal.Footer>
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    onClick={handleClose}
-                  >
+                  <button onClick={handleClose} className="login__modal__closeButton">
                     Close
-                  </Button>
-                  <Button variant="contained" color="primary" onClick={signUp}>
-                    Sign up
-                  </Button>
+                  </button>
+                  <button onClick={signUp}
+                  className="login__modal__signupButton">
+                    Sign Up
+                  </button>
                 </Modal.Footer>
               </Modal>
 

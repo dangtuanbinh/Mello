@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 30px;
 }
 
 .login__brand > img {
@@ -25,10 +25,8 @@
     font-weight: 400;
 }
 
-
-
 .login__navLink{
-    margin-right: 50px;
+    
     font-size: 20px;
     font-weight: 600;
     background-color: transparent;
@@ -80,6 +78,65 @@
     color: var(--white-color);
     font-size: 20px;
     margin-bottom: 20px;
+}
+
+/* Sign up form */
+.login__signUp{
+  display: flex;
+  flex-direction: column;
+}
+
+.login__signUp > input{
+  margin: 10px;
+  max-width: 350px;
+  border: 1px solid var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+  outline: none;
+}
+
+/* Modal layout */
+.modal-content{
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}
+
+.modal-title.h4{
+  color: var(--primary-color);
+}
+
+.modal-footer button {
+  padding: 5px 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.login__modal__closeButton{
+  margin-right: 5px;
+  background: transparent;
+}
+
+.login__modal__signupButton{
+  background: var(--primary-color);
+  color: white;
+}
+
+.login__form::-webkit-input-placeholder {
+    color: rgb(235, 235, 235);
+}
+
+.login__form::-moz-placeholder {
+    color: rgb(235, 235, 235);
+}
+
+.login__form:-ms-input-placeholder {
+    color: rgb(235, 235, 235);
+}
+
+.login__form::-ms-input-placeholder {
+    color: rgb(235, 235, 235);
 }
 
 .login__form::placeholder {

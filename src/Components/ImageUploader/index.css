@@ -35,7 +35,7 @@
 
 .imageUploader > button{
     float: right;
-    background-color: #f1d624;
+    background-color: var(--primary-color);
     width: 80px;
     border: none;
     border-radius: 999px;
