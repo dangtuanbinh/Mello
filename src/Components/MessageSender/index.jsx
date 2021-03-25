@@ -11,7 +11,7 @@ import { Modal } from "react-bootstrap";
 import ImageUploader from "../ImageUploader";
 import useModal from "../../HOCs/useModal";
 import PhotoIcon from "@material-ui/icons/Photo";
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 const MessageSender = () => {
   // Get user from Firebase
@@ -39,11 +39,13 @@ const MessageSender = () => {
       <Box className="messageSender">
         <Box className="messageSender__top">
           <Box className="messageSender__user">
-            {user.photoURL ? (
-              <img src={user.photoURL} alt="user photo" />
-            ) : (
-              <Avatar />
-            )}
+            <NavLink to="/userdetail" className="messageSender__user__navLink">
+              {user.photoURL ? (
+                <img src={user.photoURL} alt="user photo" />
+              ) : (
+                <Avatar />
+              )}
+            </NavLink>
             <h4>robindang</h4>
           </Box>
           <form className="messageSender__form">

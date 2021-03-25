@@ -27,7 +27,7 @@
     display: none;
 }
 
-.messageSender__user > img{
+.messageSender__user__navLink > img{
     width: 40px;
     border-radius: 999px;
     cursor: pointer;
@@ -125,10 +125,27 @@
 
   .messageSender__user > h4{
       display: block;
+      margin-top: 40px;
   }
 
   .messageSender__top > form > input{
       text-align: left;
+  }
+
+  .messageSender__user{
+      position: relative;
+     
+  }
+
+  .messageSender__user__navLink > img{
+      width: 100px;
+  }
+
+  .messageSender__user__navLink{
+      position: absolute;
+      transform: translate(-50%,-50%);
+      left: 50%;
+      top: -25%;
   }
 }
 
