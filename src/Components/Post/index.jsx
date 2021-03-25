@@ -10,6 +10,7 @@ import CommentSender from "../CommentSender/index";
 import "./index.css";
 import db from "../../Firebase";
 import firebase from "firebase";
+import { NavLink } from "react-router-dom";
 
 const Post = ({
   postID,
@@ -71,13 +72,18 @@ const Post = ({
     <>
       <Box
         className="post"
-        style={image ? { height: "900px" } : { height: "350px" }}
+        // style={image ? { height: "900px" } : { height: "350px" }}
       >
         <Box className="post__top">
-          <img src={profilePic} className="post__avatar" />
+          <NavLink to="/userdetail">
+            <img src={profilePic} className="post__avatar" />
+          </NavLink>
 
           <Box className="post__info">
-            <h3>{username ? username : <h3>New user</h3>}</h3>
+            <NavLink to="/userdetail" className="post__info__navLink">
+              <h3>{username ? username : <h3>New user</h3>}</h3>
+            </NavLink>
+
             <h5 className="post__timestamp">
               {new Date(timestamp?.toDate()).toUTCString()}
             </h5>
@@ -90,10 +96,12 @@ const Post = ({
 
         {image ? (
           <>
-            <Box
-              className="post__image"
-              style={{ backgroundImage: `url(${image})` }}
-            ></Box>
+            <Box className="post__image">
+              <Box
+                className="post__image__content"
+                style={{ backgroundImage: `url(${image})` }}
+              ></Box>
+            </Box>
           </>
         ) : (
           <></>

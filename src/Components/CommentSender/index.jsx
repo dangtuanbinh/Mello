@@ -15,6 +15,7 @@ const CommentSender = ({ postID, user, profilePic }) => {
       comMessage: comment,
       comUser: user.displayName,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      comProfilePic:user.photoURL,
     });
     setComment([]);
   };

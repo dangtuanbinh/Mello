@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import db from "../../Firebase";
 import "./index.css";
 
-const CommentScreen = ({ postID, user }) => {
+const CommentScreen = ({ postID, user, profilePic }) => {
   const [comments, setComments] = useState([]);
   useEffect(() => {
     let unsubcribe;
@@ -28,7 +28,7 @@ const CommentScreen = ({ postID, user }) => {
           <>
             <Box className="commentScreen__container">
               <Box className="commentScreen__body">
-                <img src={user.photoURL} alt="User photo" />
+                <img src={comment.comProfilePic} alt="User photo" />
                 <Box className="commentScreen__body__content">
                   <h5>{comment.comUser}</h5>
                   <span>{comment.comMessage}</span>

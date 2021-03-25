@@ -46,7 +46,7 @@ const MessageSender = () => {
                 <Avatar />
               )}
             </NavLink>
-            <h4>robindang</h4>
+            <h4>{user.displayName ? user.displayName : <h4>New user</h4>}</h4>
           </Box>
           <form className="messageSender__form">
             <input
