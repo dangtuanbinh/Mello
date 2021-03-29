@@ -24,7 +24,7 @@ const Feed = () => {
           <MessageSender />
           {posts?.map(({ id, data }) => (
             <Post
-              key={data.id}
+            key={data.id}
               postID={id}
               user={user}
               profilePic={data.profilePic}

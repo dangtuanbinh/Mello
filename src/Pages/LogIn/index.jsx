@@ -61,7 +61,7 @@ const LogIn = () => {
       .catch((error) => {
         alert(error.message);
       });
-      handleClose();
+    handleClose();
   };
   return (
     <>
@@ -72,7 +72,12 @@ const LogIn = () => {
           </Box>
 
           <Box className="login__navigation">
-            <button activeClassName="active" className="login__navLink" to="/signup" onClick={handleShow}>
+            <button
+              activeClassName="active"
+              className="login__navLink"
+              to="/signup"
+              onClick={handleShow}
+            >
               Sign up
             </button>
           </Box>
@@ -80,71 +85,44 @@ const LogIn = () => {
 
         <Box className="login__content">
           <Box className="login__content__container">
-            <form type="submit" className="login__form">
-              <h3>
-                Welcome! <br /> Login with your account
-              </h3>
-              <span>Email</span>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <span>Password</span>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-
-              <Box>
-                <button
-                  type="submit"
-                  onClick={signInWithUsername}
-                  variant="contained"
-                  className="login__button"
-                >
-                  Login
-                </button>
+            <Box className="login__form__container">
+              <Box className="login__form__header">
+                <h3>
+                  Welcome! <br /> Login with your account
+                </h3>
               </Box>
-            </form>
+              <Box className="login__form">
+                <span>Email</span>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <span>Password</span>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
 
-            {/* Sign up modal */}
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                  <Modal.Title>Welcome to Mellow</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <form type="submit" className="login__signUp">
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Your email"
-                    />
-                    <input
-                      type="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      placeholder="Your password"
-                    />
-                  </form>
-                </Modal.Body>
-                <Modal.Footer>
-                  <button onClick={handleClose} className="login__modal__closeButton">
-                    Close
+                <Box>
+                  <button
+                    type="submit"
+                    onClick={signInWithUsername}
+                    className="login__button"
+                  >
+                    Login
                   </button>
-                  <button onClick={signUp}
-                  className="login__modal__signupButton">
-                    Sign Up
-                  </button>
-                </Modal.Footer>
-              </Modal>
+                </Box>
+              </Box>
+            </Box>
 
-            <p>Or</p>
-            <button type="submit" onClick={signInWithGoogle}>
-              Login with Google
-            </button>
+            <Box className="login__content__footer">
+              <p>Or</p>
+              <button type="submit" onClick={signInWithGoogle}>
+                Login with Google
+              </button>
+            </Box>
           </Box>
 
           <p>
@@ -154,6 +132,35 @@ const LogIn = () => {
             </a>
           </p>
         </Box>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Welcome to Mellow</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Box className="login__signUp">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your email"
+              />
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Your password"
+              />
+            </Box>
+          </Modal.Body>
+          <Modal.Footer>
+            <button onClick={handleClose} className="login__modal__closeButton">
+              Close
+            </button>
+            <button onClick={signUp} className="login__modal__signupButton">
+              Sign Up
+            </button>
+          </Modal.Footer>
+        </Modal>
       </Box>
     </>
   );
