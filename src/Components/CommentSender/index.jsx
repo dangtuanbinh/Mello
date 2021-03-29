@@ -27,7 +27,7 @@ const CommentSender = ({ postID, user, profilePic }) => {
   return (
     <>
       <Box className="commentSender">
-        <img src={profilePic} alt="User profile" />
+        <img src={user.photoURL} alt="User profile" />
         <form className="commentSender__form">
           <input
             value={comment}

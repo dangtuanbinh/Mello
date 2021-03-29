@@ -82,7 +82,6 @@ const ImageUploader = ({ toggle }) => {
                 placeholder={`What's your cat thinking?`}
                 className="imageUploader__input"
               />
-
               <img className="imageUploader__img" src={downloadImage} alt="" />
               <button onClick={handleSubmit}>Post</button>
             </Box>

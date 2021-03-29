@@ -1,0 +1,62 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+  display: none;
+  background: white;
+  width: 100%;
+  display: none;
+
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.1px solid rgb(146, 146, 146);
+}
+.footer__option > .MuiSvgIcon-root {
+  color: rgb(133, 133, 133);
+  font-weight: 300;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.activeOption > .MuiSvgIcon-root{
+    color: var(--primary-color);
+    font-weight: normal;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.footer__option{
+    position: relative;
+    padding: 10px 15px 0 15px;
+}
+.footer__option::before{
+    content: "";
+    width:0;
+    height: 3px;
+    display: block;
+    background: var(--primary-color) ;
+    box-shadow: 0 0 20px 0 #fbbd61;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s linear 0s;
+}
+.footer__option.activeOption::before{
+    width: 100%;
+}
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+}
+/* End of responsive */

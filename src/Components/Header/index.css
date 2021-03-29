@@ -133,6 +133,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .header {
+    position: relative;
+    top: 1px;
+  }
   .header .navbar-light .navbar-brand {
     font-size: 20px;
   }
