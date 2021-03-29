@@ -16,7 +16,7 @@
   width: 50px;
   border-radius: 50%;
 }
-.post__info{
+.post__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +27,7 @@
   text-decoration: none;
   color: black;
 }
-.post__info__navLink:hover{
+.post__info__navLink:hover {
   text-decoration: none;
 }
 .post__info > h5 {
@@ -40,10 +40,10 @@
 }
 .post__image {
   width: 100%;
-  height: 400px;
- padding: 20px;
+  height: 430px;
+  padding: 20px;
 }
-.post__image__content{
+.post__image__content {
   border-radius: 10px;
   width: 100%;
   height: 400px;
@@ -52,34 +52,36 @@
   background-position: center center;
   margin-bottom: 20px;
 }
-.post__statistic{
+.post__statistic {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
 }
-.post__statistic__right{
+.post__statistic p{
+  color: rgb(163, 163, 163);
+}
+.post__statistic__right {
   display: flex;
   justify-content: center;
   text-align: center;
 }
-.post__statistic > p{
+.post__statistic > p {
   cursor: pointer;
 }
-.post__statistic__right > p{
+.post__statistic__right > p {
   margin-right: 30px;
   cursor: pointer;
 }
 .post__comment {
-  border-top: 1px solid lightgray;
+  border-top: 1px solid var(--lightGrey-color);
 }
 .post__optionGroup {
   padding-top: 10px;
-  border-top: 1px solid lightgray;
+  border-top: 1px solid var(--lightGrey-color);
   display: flex;
   justify-content: space-evenly;
   font-size: medium;
-  color: gray;
   cursor: pointer;
   padding: 15px;
 }
@@ -90,20 +92,20 @@
   padding: 5px;
   flex: 1;
 }
-.post__option--like{
+.post__option--like {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5px;
   flex: 1;
 }
-.post__option--like > h5{
+.post__option--like > h5 {
   margin: 0px 0px 0px 5px;
   color: var(--primary-color);
   font-weight: 600;
   font-size: large;
 }
-.post__option--like > .MuiSvgIcon-root{
+.post__option--like > .MuiSvgIcon-root {
   margin: 10px;
   color: var(--primary-color);
 }
@@ -115,13 +117,13 @@
 }
 .post__option > .MuiSvgIcon-root {
   margin: 10px;
-  color: rgb(160, 158, 158);
+  color: rgb(190, 189, 189);
 }
 .post__option:hover {
   background-color: #eff2f5;
   border-radius: 10px;
 }
-.post__timestamp{
+.post__timestamp {
   font-size: 15px;
   color: gray;
   font-weight: 400;
@@ -131,28 +133,28 @@
 @media screen and (max-width: 1200px) {
 }
 @media screen and (max-width: 1024px) {
-    
-}   
+}
 @media screen and (max-width: 768px) {
   .post__option > h5 {
     display: none;
   }
 }
 @media screen and (max-width: 576px) {
-  .post{
+  .post {
     border-radius: 0;
   }
-  .post__statistic{
+  .post__statistic {
     padding: 0 15px;
   }
-  .post__statistic p{
-font-size: 15px;
+  .post__statistic p {
+    font-size: 15px;
   }
-  .post__image{
+  .post__image {
     padding: 0;
     margin-bottom: 15px;
+    height: 410px;
   }
-  .post__image__content{
+  .post__image__content {
     border-radius: 0;
   }
 }

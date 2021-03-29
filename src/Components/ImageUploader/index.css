@@ -2,24 +2,22 @@
     position: relative;
 }
 
-.imageUploader__form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .imageUploader__top{
     width: 100%;
     display: flex;
     border-bottom: 1px solid rgb(233, 231, 231);
     padding: 10px 0;
+    flex-direction: column;
 }
 
 .imageUploader__top > button {
     border: none;
     border-radius: 20px;
     padding: 5px 10px;
-    margin-left: 10px;
+    margin-top: 15px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 18px;
 }
 
 .imageUploader__input{
@@ -33,7 +31,7 @@
     text-align: center;
 }
 
-.imageUploader > button{
+.imageUploader__bottom > button{
     float: right;
     background-color: var(--primary-color);
     width: 80px;

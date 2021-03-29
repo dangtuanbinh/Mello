@@ -135,7 +135,6 @@ const Post = ({
           </Box>
 
           <Box className="post__option">
-            <AccountCircleIcon />
             <ExpandMoreIcon />
           </Box>
         </Box>

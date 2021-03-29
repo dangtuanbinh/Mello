@@ -28,10 +28,9 @@ const CommentSender = ({ postID, user, profilePic }) => {
     <>
       <Box className="commentSender">
         <img src={profilePic} alt="User profile" />
-        <form className="commentSender__form" type="submit">
+        <form className="commentSender__form">
           <input
             value={comment}
-            type="text"
             placeholder="Your comment..."
             onChange={(e) => setComment(e.target.value)}
           />

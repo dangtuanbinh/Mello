@@ -42,5 +42,25 @@
     margin-right: 20px;
 }
 
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
 
+@media screen and (max-width: 1024px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+@media screen and (max-width: 576px) {
+    .commentScreen__body__content > h5{
+        font-size: 16px;
+    }
+    .commentScreen__footer > p{
+        font-size: 12px;
+    }
+}
+/* End of responsive */
 

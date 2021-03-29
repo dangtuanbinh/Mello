@@ -4,11 +4,10 @@ import db from "../../Firebase";
 import { storage } from "../../Firebase";
 import firebase from "firebase";
 import { useStateValue } from "../../Context API/StateProvider";
-import {withRouter} from "react-router-dom";
-import { useHistory } from 'react-router-dom'
+import { withRouter } from "react-router-dom";
 import "./index.css";
 
-const ImageUploader = ({toggle}) => {
+const ImageUploader = ({ toggle }) => {
   // Get user from Firebase
   const [{ user }, dispatch] = useStateValue();
 
@@ -16,6 +15,8 @@ const ImageUploader = ({toggle}) => {
   const [input, setInput] = useState("");
   const [image, setImage] = useState("");
   const [downloadImage, setDownloadImage] = useState("");
+  const [showTop, setShowTop] = useState(true);
+  const [showBottom, setShowBottom] = useState(false);
 
   const handleChange = (e) => {
     if (e.target.files[0]) {
@@ -25,7 +26,7 @@ const ImageUploader = ({toggle}) => {
 
   const upload = (e) => {
     e.preventDefault();
-    const uploadTask = storage.ref(`images/${image.name}`).put(image);
+    storage.ref(`images/${image.name}`).put(image);
     storage
       .ref("images")
       .child(image.name)
@@ -33,14 +34,16 @@ const ImageUploader = ({toggle}) => {
       .then((url) => {
         setDownloadImage(url);
       });
+      setShowTop(!showTop)
+      setShowBottom(!showBottom)
   };
 
   // Set toggle to close modal in parent component
   const setToggle = () => {
-    if(downloadImage) {
-      toggle(false)
+    if (downloadImage) {
+      toggle(false);
     }
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,34 +57,37 @@ const ImageUploader = ({toggle}) => {
     setToggle();
   };
 
-  
   return (
     <>
       <Box className="imageUploader">
-        <form className="imageUploader__form">
-          <Box className="imageUploader__top">
-            <input
-              type="file"
-              onChange={handleChange}
-              accept="image/*,video/*"
-            />
-            <button onClick={upload}>
-              Pick this!!
-            </button>
-          </Box>
+        {showTop && (
+          <>
+            <Box className="imageUploader__top">
+              <input
+                type="file"
+                onChange={handleChange}
+                accept="image/*,video/*"
+              />
+              <button onClick={upload}>Next</button>
+            </Box>
+          </>
+        )}
 
-          <Box>
-            <input
-              onChange={(e) => setInput(e.target.value)}
-              value={input}
-              placeholder={`What's your cat thinking?`}
-              className="imageUploader__input"
-            />
+        {showBottom && (
+          <>
+            <Box className="imageUploader__bottom">
+              <input
+                onChange={(e) => setInput(e.target.value)}
+                value={input}
+                placeholder={`What's your cat thinking?`}
+                className="imageUploader__input"
+              />
 
-            <img className="imageUploader__img" src={downloadImage} alt="" />
-          </Box>
-        </form>
-        <button onClick={handleSubmit}>Post</button>
+              <img className="imageUploader__img" src={downloadImage} alt="" />
+              <button onClick={handleSubmit}>Post</button>
+            </Box>
+          </>
+        )}
       </Box>
     </>
   );
