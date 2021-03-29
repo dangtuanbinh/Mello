@@ -1,4 +1,20 @@
-.home{
-    background-color: var(--secondary-color
-    );
+.home {
+  background-color: var(--secondary-color);
 }
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        background-color: var(--grey-color);
+      }
+}
+
+@media screen and (max-width: 576px) {
+}
+/* End of responsive */

@@ -27,5 +27,8 @@
 }
 
 @media screen and (max-width: 576px) {
+  .homeBody__feed > .MuiContainer-root, .homeBody__feed{
+    padding: 0;
+  }
 }
 /* End of responsive */

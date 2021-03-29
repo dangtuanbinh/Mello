@@ -27,7 +27,7 @@
   background-color: var(--secondary-color);
 }
 
-.commentSender__icon {
+.commentSender__form > .MuiSvgIcon-root{
   position: absolute;
   right: 30px;
   cursor: pointer;
@@ -37,3 +37,24 @@
 .commentSender__button {
   display: none;
 }
+
+* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+  .commentSender__form > input {
+    background: var(--grey-color);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .commentSender__form > input {
+    background: none;
+  }
+}
+/* End of responsive */

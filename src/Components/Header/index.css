@@ -29,12 +29,6 @@
   width: 60px;
 }
 
-.navbar-light .navbar-brand {
-  font-size: 30px;
-  font-weight: 600;
-  color: #edd63e;
-}
-
 .header__search {
   position: relative;
   display: flex;
@@ -49,7 +43,7 @@
   margin-left: 660px;
 }
 
-.header__search input {
+.header__search > input {
   border-radius: 15px;
   overflow: hidden;
   width: 700px;
@@ -148,6 +142,11 @@
     justify-content: space-around;
     align-items: center;
   }
+
+  .header__search > input {
+    background: none;
+    flex: 1;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -158,5 +157,7 @@
   .header__brand > h3 {
     display: none;
   }
+
+ 
 }
 /* End of responsive */

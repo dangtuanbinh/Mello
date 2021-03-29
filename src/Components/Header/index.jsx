@@ -7,19 +7,34 @@ import FlagIcon from "@material-ui/icons/Flag";
 import SubscriptionsIcon from "@material-ui/icons/Subscriptions";
 import LocalGroceryStoreIcon from "@material-ui/icons/LocalGroceryStore";
 import AccountBoxIcon from "@material-ui/icons/AccountBox";
-import AddIcon from "@material-ui/icons/Add";
 import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import brandImage from "../../Assets/images/brand-removebg-preview.png";
 import { useStateValue } from "../../Context API/StateProvider";
 import { NavLink } from "react-router-dom";
+import firebase from "firebase";
+import { actionTypes } from "../../Context API/reducer";
 
 import "./index.css";
 
 const Header = () => {
   const [{ user }, dispatch] = useStateValue();
-
+  //   Log out
+  const logOut = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        dispatch({
+          type: actionTypes.DELETE_USER_WITH_GOOGLE,
+          user: null,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   // Implement account search
   const [accountSearch, setAccountSearch] = useState();
   return (
@@ -91,9 +106,8 @@ const Header = () => {
                 <Avatar src={user.photoURL} />
                 <h4>{user.displayName ? user.displayName : user.email}</h4>
               </NavLink>
-
               <IconButton>
-                <AddIcon />
+                <ExitToAppIcon onClick={logOut}/>
               </IconButton>
 
               <IconButton>
@@ -102,10 +116,6 @@ const Header = () => {
 
               <IconButton>
                 <NotificationsActiveIcon />
-              </IconButton>
-
-              <IconButton>
-                <ExpandMoreIcon />
               </IconButton>
             </Box>
           </Navbar.Collapse>

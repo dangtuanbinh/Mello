@@ -11,13 +11,18 @@ const CommentSender = ({ postID, user, profilePic }) => {
 
   const postComment = (e) => {
     e.preventDefault();
-    db.collection("posts").doc(postID).collection("comment").add({
-      comMessage: comment,
-      comUser: user.displayName,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      comProfilePic:user.photoURL,
-    });
-    setComment([]);
+    if(comment !== "") {
+      db.collection("posts").doc(postID).collection("comment").add({
+        comMessage: comment,
+        comUser: user.displayName,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        comProfilePic:user.photoURL,
+      });
+      setComment([])
+    } else {
+      alert("please enter your comment")
+    }
+    
   };
   return (
     <>
@@ -32,15 +37,12 @@ const CommentSender = ({ postID, user, profilePic }) => {
           />
           <button
             onClick={postComment}
-            type="submit"
             className="commentSender__button"
           >
             submit
           </button>
           <SendIcon
-            className="commentSender__icon"
             onClick={postComment}
-            type="submit"
           />
         </form>
       </Box>

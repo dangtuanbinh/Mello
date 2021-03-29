@@ -11,6 +11,7 @@ import { Modal } from "react-bootstrap";
 import ImageUploader from "../ImageUploader";
 import useModal from "../../HOCs/useModal";
 import PhotoIcon from "@material-ui/icons/Photo";
+import SendIcon from "@material-ui/icons/Send";
 import { NavLink } from "react-router-dom";
 
 const MessageSender = () => {
@@ -57,25 +58,10 @@ const MessageSender = () => {
             />
 
             <Box className="messageSender__uploader">
+              <SendIcon onClick={uploadStatus}/>
               <Box className="messageSender__uploader__button" onClick={toggle}>
                 <PhotoIcon />
               </Box>
-
-              <Modal
-                show={show}
-                onHide={toggle}
-                dialogClassName="modal-90w"
-                aria-labelledby="example-custom-modal-styling-title"
-                keyboard="true"
-              >
-                <Modal.Header closeButton>
-                  <h3>MELLOW</h3>
-                </Modal.Header>
-                <Modal.Body>
-                  {/* Pass toggle function to child component, to close it later */}
-                  <ImageUploader toggle={toggle} />
-                </Modal.Body>
-              </Modal>
             </Box>
 
             <button onClick={uploadStatus} type="submit">
@@ -100,6 +86,22 @@ const MessageSender = () => {
             <h3>Feeling/Activity</h3>
           </Box>
         </Box>
+
+        <Modal
+          show={show}
+          onHide={toggle}
+          dialogClassName="modal-90w"
+          aria-labelledby="example-custom-modal-styling-title"
+          keyboard="true"
+        >
+          <Modal.Header closeButton>
+            <h3>MELLOW</h3>
+          </Modal.Header>
+          <Modal.Body>
+            {/* Pass toggle function to child component, to close it later */}
+            <ImageUploader toggle={toggle} />
+          </Modal.Body>
+        </Modal>
       </Box>
     </>
   );

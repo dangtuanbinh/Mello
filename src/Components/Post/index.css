@@ -4,55 +4,45 @@
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
-
 }
-
 .post__top {
   display: flex;
   position: relative;
   align-items: center;
   padding: 15px;
 }
-
 .post__avatar {
   margin-right: 7px;
   width: 50px;
   border-radius: 50%;
 }
-
 .post__info{
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .post__info__navLink > h3 {
   font-size: medium;
   font-weight: bold;
   text-decoration: none;
   color: black;
 }
-
 .post__info__navLink:hover{
   text-decoration: none;
 }
-
 .post__info > h5 {
   font-size: small;
   color: gray;
   text-align: center;
 }
-
 .post__bottom {
   padding: 5px 25px;
 }
-
 .post__image {
   width: 100%;
-  height: 450px;
+  height: 400px;
  padding: 20px;
 }
-
 .post__image__content{
   border-radius: 10px;
   width: 100%;
@@ -62,32 +52,27 @@
   background-position: center center;
   margin-bottom: 20px;
 }
-
 .post__statistic{
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
 }
-
 .post__statistic__right{
   display: flex;
   justify-content: center;
+  text-align: center;
 }
-
 .post__statistic > p{
   cursor: pointer;
 }
-
 .post__statistic__right > p{
   margin-right: 30px;
   cursor: pointer;
 }
-
 .post__comment {
   border-top: 1px solid lightgray;
 }
-
 .post__optionGroup {
   padding-top: 10px;
   border-top: 1px solid lightgray;
@@ -98,7 +83,6 @@
   cursor: pointer;
   padding: 15px;
 }
-
 .post__option {
   display: flex;
   justify-content: center;
@@ -106,7 +90,6 @@
   padding: 5px;
   flex: 1;
 }
-
 .post__option--like{
   display: flex;
   justify-content: center;
@@ -114,36 +97,30 @@
   padding: 5px;
   flex: 1;
 }
-
 .post__option--like > h5{
   margin: 0px 0px 0px 5px;
   color: var(--primary-color);
   font-weight: 600;
   font-size: large;
 }
-
 .post__option--like > .MuiSvgIcon-root{
   margin: 10px;
   color: var(--primary-color);
 }
-
 .post__option > h5 {
   margin: 0px 0px 0px 5px;
   color: var(--dark-color);
   font-weight: 600;
   font-size: large;
 }
-
 .post__option > .MuiSvgIcon-root {
   margin: 10px;
   color: rgb(160, 158, 158);
 }
-
 .post__option:hover {
   background-color: #eff2f5;
   border-radius: 10px;
 }
-
 .post__timestamp{
   font-size: 15px;
   color: gray;
@@ -153,20 +130,30 @@
 /* Rsponsive */
 @media screen and (max-width: 1200px) {
 }
-
 @media screen and (max-width: 1024px) {
     
 }   
-
 @media screen and (max-width: 768px) {
   .post__option > h5 {
     display: none;
   }
 }
-
 @media screen and (max-width: 576px) {
+  .post{
+    border-radius: 0;
+  }
   .post__statistic{
-    padding: 0 5px;
+    padding: 0 15px;
+  }
+  .post__statistic p{
+font-size: 15px;
+  }
+  .post__image{
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  .post__image__content{
+    border-radius: 0;
   }
 }
 

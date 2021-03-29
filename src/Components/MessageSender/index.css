@@ -41,17 +41,20 @@
 }
 
 .messageSender__top > form > input {
-  outline-width: 0;
+  outline: none;
   border: none;
   padding: 5px 20px;
   margin: 0 10px;
-  border-radius: 999px;
 }
 
 .messageSender__top > form > button {
   display: none;
 }
 
+.messageSender__uploader{
+  display: flex;
+  align-items: center;
+}
 
 .messageSender__uploader__button {
   cursor: pointer;
@@ -64,6 +67,12 @@
   font-weight: bold;
   color: rgb(173, 171, 171);
   text-align: center;
+  margin-left: 15px;
+}
+
+.messageSender__uploader> .MuiSvgIcon-root{
+  color: var(--primary-color);
+  display: none;
 }
 
 .messageSender__bottom {
@@ -152,6 +161,10 @@
       left: 50%;
       top: -25%;
   }
+
+  .messageSender__uploader> .MuiSvgIcon-root{
+    display: block;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -161,5 +174,8 @@
 }
 
 @media screen and (max-width: 576px) {
+  .messageSender{
+    border-radius: 0;
+  }
 }
 /* End of responsive */
