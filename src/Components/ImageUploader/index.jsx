@@ -34,8 +34,8 @@ const ImageUploader = ({ toggle }) => {
       .then((url) => {
         setDownloadImage(url);
       });
-      setShowTop(!showTop)
-      setShowBottom(!showBottom)
+    setShowTop(!showTop);
+    setShowBottom(!showBottom);
   };
 
   // Set toggle to close modal in parent component

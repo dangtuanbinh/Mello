@@ -73,7 +73,9 @@
   font-size: 2rem;
   color: var(--primary-color);
 }
-
+.header .navbar-collapse{
+  align-items: flex-end;
+}
 .header__right {
   display: flex;
   align-items: center;

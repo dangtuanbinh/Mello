@@ -14,17 +14,9 @@ const SidebarOption = ({ Icon, title, id, addChannelOption }) => {
     }
   }
 
-  const addChannel = () => {
-    const channelName = prompt('please add your channel')
-    if(channelName) {
-      db.collection('room').add({
-        name:channelName,
-      })
-    }
-  }
   return (
     <>
-      <Box className="sidebarOption" onClick={addChannelOption ? addChannel : selectChannel}>
+      <Box className="sidebarOption" onClick={selectChannel}>
         {Icon && <Icon className="sidebarOption__icon" />}
         {Icon ? (
           <h3>{title}</h3>

@@ -24,6 +24,8 @@
 }
 
 @media screen and (max-width: 576px) {
- 
+ .chatBody{
+   padding: 0;
+ }
 }
 /* End of responsive */

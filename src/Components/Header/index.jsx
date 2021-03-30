@@ -68,39 +68,6 @@ const Header = () => {
 
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav>
-              <div className="header__center">
-                <div className="header__option">
-                  <NavLink className="header__option__link" to="/">
-                    <HomeIcon />
-                  </NavLink>
-                </div>
-
-                <div className="header__option">
-                  <NavLink className="header__option__link" to="/forum">
-                    <FlagIcon />
-                  </NavLink>
-                </div>
-
-                <div className="header__option">
-                  <NavLink className="header__option__link" to="/video">
-                    <SubscriptionsIcon />
-                  </NavLink>
-                </div>
-
-                <div className="header__option">
-                  <NavLink className="header__option__link" to="/shop">
-                    <LocalGroceryStoreIcon />
-                  </NavLink>
-                </div>
-                <div className="header__option">
-                  <NavLink className="header__option__link" to="/user">
-                    <AccountBoxIcon />
-                  </NavLink>
-                </div>
-              </div>
-            </Nav>
-
             <Box className="header__right">
               <NavLink to="/userdetail" className="header__info">
                 <Avatar src={user.photoURL} />

@@ -6,8 +6,27 @@
   height: 85vh;
   border-radius: 20px;
   padding: 10px;
+  z-index: 999;
 }
-
+.sidebar__top{
+  padding: 10px 0;
+}
+.sidebar__bottom {
+  border-top: 1px solid var(--grey-color);
+  background: white;
+  padding: 10px 0;
+}
+.sidebar__bottom .navbar{
+  padding: 0 !important;
+}
+.sidebar__bottom .navbar-collapse, .sidebar__bottom .navbar{
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sidebar__bottom__navBrand{
+  display: flex;
+  align-items: center;
+}
 .sidebar__search {
   margin: 10px;
   position: relative;
@@ -58,18 +77,34 @@
 @media screen and (max-width: 1200px) {
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
  
 }
 
 @media screen and (max-width: 768px) {
- 
+  .sidebar__bottom .navbar{
+    flex-direction: row;
+  }
+  .sidebar{
+    height: 12vh;
+    margin: 5px 0;
+    border-radius: 0;
+  }
+  .sidebar__bottom .navbar-collapse{
+    width: 100%;
+  }
+  .sidebar__bottom {
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 576px) {
- .sidebar{
-   height: 25vh;
-   margin-bottom: 15px;
+  .sidebar{
+    height: 16vh;
+    padding: 0;
+  }
+ .sidebar__col{
+   padding: 0;
  }
 }
 /* End of responsive */
