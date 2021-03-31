@@ -44,7 +44,7 @@ const Footer = () => {
           </NavLink>
           <NavLink
             className="footer__option"
-            to="/userdetail"
+            to="/userdetail/:userID"
             activeClassName="activeOption"
           >
             <ContactsOutlinedIcon />

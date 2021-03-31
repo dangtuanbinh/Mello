@@ -45,7 +45,7 @@
 }
 
 .userPost__info__icon--statistic > .MuiSvgIcon-root {
-    color: var(--grey-color);
+    color: rgb(155, 155, 155);
     margin-right: 5px;
 }
 

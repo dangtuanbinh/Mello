@@ -72,16 +72,16 @@ const Post = ({
     <>
       <Box
         className="post"
-        // style={image ? { height: "900px" } : { height: "350px" }}
       >
         <Box className="post__top">
-          <NavLink to="/userdetail">
-            <img src={profilePic} className="post__avatar" />
+          <NavLink to="/userdetail/:userID" className="post__avatar">
+            {profilePic ?  <img src={profilePic} className="post__avatar" /> : <AccountCircleIcon />}
+           
           </NavLink>
 
           <Box className="post__info">
-            <NavLink to="/userdetail" className="post__info__navLink">
-              <h3>{username ? username : <h3>New user</h3>}</h3>
+            <NavLink to="/userdetail/:userID" className="post__info__navLink">
+              {username ? <h3>{username}</h3> : <h3>New user</h3>}
             </NavLink>
 
             <h5 className="post__timestamp">

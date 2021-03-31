@@ -84,7 +84,7 @@ const UserSideBar = () => {
               <Box className="userSideBar__navigator__body">
                 <Nav
                   transition={true}
-                  className="flex-column"
+                  className="userSideBar__navigator__container"
                 >
                   <Nav.Item>
                     <Nav.Link

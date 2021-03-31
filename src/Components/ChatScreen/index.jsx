@@ -23,7 +23,7 @@ const Chat = () => {
       db.collection("room")
         .doc(roomID)
         .collection("message")
-        .orderBy("timestamp", "asc")
+        .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) =>
           setRoomMessage(snapshot.docs.map((doc) => doc.data()))
         );
@@ -33,7 +33,7 @@ const Chat = () => {
   console.log(roomMessage);
   return (
     <>
-      <Col xs="12" md="9" lg="9">
+      <Col xs="12" md="12" lg="9" className="chat__col">
         <Box className="chat">
 
           <Box className="chat__header">

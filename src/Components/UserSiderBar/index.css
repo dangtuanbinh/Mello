@@ -90,7 +90,10 @@
   font-size: 20px;
   font-size: 600;
 }
-
+.userSideBar__navigator__container{
+  display: flex;
+  flex-direction: column;
+}
 .userSideBar__navigator__body,
 .userSideBar__navigator__footer {
   padding-left: 30px;
@@ -143,6 +146,39 @@ font-weight: bolder;
 .nav-link{
   padding: 0 !important;
 }
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+    .userSideBar{
+      flex-direction: column;
+    }
+    .userSideBar__navigator__container{
+      flex-direction: row;
+      justify-content: space-between;
+      border-top: 1px solid rgb(219, 219, 219);
+      padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .userSideBar__navigator__link > h5{
+    display: none;
+  }
+  .userSideBar__navigator .nav-link.active ,.userSideBar__navigator .show>.nav-link{
+    border-right: none;
+  }
+  .userSideBar__info{
+    background: white;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+}
+/* End of responsive */
 
 
 

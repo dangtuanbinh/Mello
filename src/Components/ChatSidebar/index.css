@@ -6,7 +6,7 @@
   height: 85vh;
   border-radius: 20px;
   padding: 10px;
-  z-index: 999;
+ 
 }
 .sidebar__top{
   padding: 10px 0;
@@ -18,6 +18,10 @@
 }
 .sidebar__bottom .navbar{
   padding: 0 !important;
+}
+.sidebar__bottom .navbar-collapse{
+  background: white;
+  z-index: 999;
 }
 .sidebar__bottom .navbar-collapse, .sidebar__bottom .navbar{
   flex-direction: column;
@@ -86,9 +90,9 @@
     flex-direction: row;
   }
   .sidebar{
-    height: 12vh;
+    height: 14vh;
     margin: 5px 0;
-    border-radius: 0;
+    ;
   }
   .sidebar__bottom .navbar-collapse{
     width: 100%;
@@ -102,6 +106,7 @@
   .sidebar{
     height: 16vh;
     padding: 0;
+    border-radius: 0
   }
  .sidebar__col{
    padding: 0;

@@ -1,37 +1,57 @@
-.chatInput{
-    border-radius: 20px;
+.chatInput {
+  border-radius: 20px;
+  width: 100%;
+  z-index: 999;
 }
 
 .chatInput > form {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .chatInput > form > input {
-    width: 100%;
-    border: 1px solid rgb(170, 169, 169);
-    border-radius: 50px;
-    padding: 20px;
-    outline: none;
+  width: 100%;
+  border: 1px solid rgb(170, 169, 169);
+  border-radius: 50px;
+  padding: 20px;
+  outline: none;
 }
 
 .chatInput > form > button {
-    display: none !important;
+  display: none !important;
 }
 
+.chatInput__icon {
+  display: flex;
+  align-items: center;
+}
+.chatInput__icon .MuiSvgIcon-root{
+    margin-left: 10px;
+    color: var(--light-color);
+}
+.chatInput__icon .MuiSvgIcon-root:nth-child(3){
+    color: var(--primary-color);
+}
 /* Responsive */
 @media screen and (max-width: 1200px) {
 }
 
 @media screen and (max-width: 992px) {
- 
 }
 
 @media screen and (max-width: 768px) {
- 
+  .chatInput > form > input {
+    border-radius: 0;
+    padding: 12px;
+    border: none;
+  }
+  .chatInput {
+    border-top: 1px solid rgb(170, 169, 169);
+    border-radius: 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
- 
 }
 /* End of responsive */

@@ -16,13 +16,17 @@
   width: 50px;
   border-radius: 50%;
 }
+.post__avatar > .MuiSvgIcon-root {
+  font-size: 3.5rem;
+  color: var(--grey-color);
+}
 .post__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .post__info__navLink > h3 {
-  font-size: medium;
+  font-size: 18px;
   font-weight: bold;
   text-decoration: none;
   color: black;
@@ -58,7 +62,7 @@
   justify-content: space-between;
   padding: 0 30px;
 }
-.post__statistic p{
+.post__statistic p {
   color: rgb(163, 163, 163);
 }
 .post__statistic__right {

@@ -12,7 +12,7 @@
 }
 
 .userFeed__header__icon .MuiSvgIcon-root{
-    color: var(--grey-color);
+    color: rgb(155, 155, 155);
     margin-right: 20px;
     cursor: pointer;
     font-weight: 600;
@@ -72,6 +72,25 @@
     display: none;
 }
 
-.userFeed__body__bottom{
-    
+/* Responsive */
+@media screen and (max-width: 1200px) {
 }
+
+@media screen and (max-width: 1024px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+@media screen and (max-width: 576px) {
+    .userFeed__body__top > h2{
+        font-size: 25px;
+    }
+    .userFeed__header__icon > button{
+        font-size: 13px;
+        padding: 5px 12px;
+    }
+}
+/* End of responsive */

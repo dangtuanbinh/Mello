@@ -1,16 +1,15 @@
-import { Box, Button } from "@material-ui/core";
+import { Box} from "@material-ui/core";
 import React, { useState } from "react";
 import { auth, provider } from "../../Firebase";
 import { actionTypes } from "../../Context API/reducer";
 import { useStateValue } from "../../Context API/StateProvider";
-import { useHistory } from "react-router-dom";
 import brandImage from "../../Assets/images/brand-removebg-preview.png";
 import "./index.css";
 import { Modal } from "react-bootstrap";
-import { NavLink, withRouter } from "react-router-dom";
+import {withRouter } from "react-router-dom";
 
 const LogIn = () => {
-  const [state, dispatch] = useStateValue();
+  const [dispatch] = useStateValue();
   // Sign in with Google authentication
   const signInWithGoogle = (e) => {
     e.preventDefault();
@@ -30,7 +29,6 @@ const LogIn = () => {
 
   // Signup modal
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -50,7 +48,6 @@ const LogIn = () => {
   // Sign up with username and password
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const history = useHistory();
   const signUp = (e) => {
     e.preventDefault();
     auth
@@ -68,7 +65,7 @@ const LogIn = () => {
       <Box className="login">
         <Box className="login__header">
           <Box className="login__brand">
-            <img src={brandImage} alt="Brand image" />
+            <img src={brandImage} alt="Brand" />
           </Box>
 
           <Box className="login__navigation">
@@ -127,7 +124,7 @@ const LogIn = () => {
 
           <p>
             Need account?{" "}
-            <a href="#" onClick={handleShow}>
+            <a onClick={handleShow}>
               Sign up here
             </a>
           </p>

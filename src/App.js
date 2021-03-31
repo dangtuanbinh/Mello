@@ -30,7 +30,7 @@ function App() {
         console.log("user not log in");
       }
     });
-  }, []);
+  }, [dispatch]);
   return (
     <div className="app">
       <BrowserRouter>
@@ -39,7 +39,7 @@ function App() {
         ) : (
           <>
             <Switch>
-              <Route path="/userdetail" component={UserDetail} />
+              <Route path="/userdetail/:userID" component={UserDetail} />
               <Route path="/accountSearch" component={AccountSearch} />
               <Route path="/user" component={User} />
               <Route path="/shop" component={Shop} />

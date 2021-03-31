@@ -73,13 +73,11 @@
   font-size: 2rem;
   color: var(--primary-color);
 }
-.header .navbar-collapse{
-  align-items: flex-end;
-}
+
 .header__right {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .header__info {
